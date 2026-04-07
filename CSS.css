@@ -1,0 +1,130 @@
+/* RESET & GLOBAL */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding-top: 70px; /* biar tidak ketutup navbar */
+}
+
+h1, h2, h4 {
+  font-weight: bold;
+}
+
+/* NAVBAR */
+.navbar-brand {
+  font-size: 22px;
+  color: #ff6a00 !important;
+}
+
+/* HERO */
+.hero {
+  padding: 120px 20px;
+  text-align: center;
+  color: white;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('https://images.unsplash.com/photo-1603575448360-153f093fd0a5');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero h1 {
+  font-size: 42px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* BUTTON */
+.btn-orange {
+  background-color: #ff6a00;
+  color: white;
+  border: none;
+  transition: 0.3s;
+}
+
+.btn-orange:hover {
+  background-color: #e55d00;
+  transform: scale(1.05);
+}
+
+.btn-outline-dark {
+  transition: 0.3s;
+}
+
+.btn-outline-dark:hover {
+  transform: scale(1.05);
+}
+
+/* ABOUT */
+#about img {
+  border-radius: 15px;
+}
+
+/* TIM */
+.bg-light {
+  background-color: #f1f1f1 !important;
+}
+
+#about, #event {
+  scroll-margin-top: 90px;
+}
+
+/* TIM GRID */
+.bg-light .col-md-3 {
+  background: white;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.bg-light .col-md-3:hover {
+  transform: translateY(-5px);
+}
+
+/* EVENT */
+.card {
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* INPUT */
+.form-control {
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.form-control:focus {
+  border-color: #ff6a00;
+  box-shadow: 0 0 5px rgba(255,106,0,0.5);
+}
+
+/* MODAL */
+.modal-content {
+  border-radius: 15px;
+  border: none;
+}
+
+/* FOOTER / KONTAK */
+.bg-dark {
+  background-color: #222 !important;
+}
+
+.bg-dark p {
+  margin: 5px 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .bg-light .col-md-3 {
+    margin: 10px auto;
+  }
+}

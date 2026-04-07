@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lentera Cerah</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="CSS.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg bg-light shadow-sm fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold">Lentera Cerah</a>
+    <div>
+      <button class="btn btn-outline-dark me-2" onclick="scrollToSection('about')">Tentang Kami</button>
+      <button class="btn btn-outline-dark me-2" onclick="scrollToSection('event')">Event</button>
+      <button class="btn btn-orange" data-bs-toggle="modal" data-bs-target="#donasiModal">Donasi</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero text-center">
+  <div class="container">
+    <h1>Menyinari Masa Depan Anak Yatim</h1>
+    <p>Bersama kita bantu mereka meraih mimpi</p>
+    <button class="btn btn-orange" data-bs-toggle="modal" data-bs-target="#donasiModal">
+      Donasi Sekarang
+    </button>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="container py-5">
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <h2>Tentang Kami</h2>
+      <p>
+        Lentera Cerah adalah organisasi sosial yang berfokus membantu anak yatim piatu melalui pendidikan,
+        pelatihan keterampilan, serta dukungan moral dan emosional.
+      </p>
+      <p>
+        Kami berkomitmen memberikan kesempatan yang lebih baik agar mereka dapat tumbuh menjadi generasi mandiri,
+        percaya diri, dan berdaya saing tinggi.
+      </p>
+      <p>
+        Setiap donasi yang Anda berikan adalah harapan baru bagi masa depan mereka.
+      </p>
+    </div>
+    <div class="col-md-6">
+      <img src="anak.png" class="img-fluid rounded shadow">
+    </div>
+  </div>
+</section>
+
+<!-- TIM -->
+<section class="bg-light py-5">
+  <div class="container text-center">
+    <h2>Tim Kami</h2>
+    <div class="row mt-4">
+      <div class="col-md-3">Samuel Atilla<br><small>Founder</small></div>
+      <div class="col-md-3">Michael Ugrasena<br><small>Manager Program</small></div>
+      <div class="col-md-3">Igor<br><small>Koordinator Lapangan</small></div>
+      <div class="col-md-3">Samjo<br><small>Keuangan</small></div>
+      <div class="col-md-3 mt-3">Abraham Paulus Putra Doy<br><small>Relawan Senior</small></div>
+      <div class="col-md-3 mt-3">Halley Hilman<br><small>Relawan</small></div>
+      <div class="col-md-3 mt-3">Salvio Doli<br><small>Relawan</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENT -->
+<section id="event" class="container py-5">
+  <h2 class="text-center">Daftar Event</h2>
+  <div class="card p-4 mt-4">
+    <h5>Workshop Pendidikan Anak Yatim</h5>
+    <p>Ikuti kegiatan sosial bersama kami dan berkontribusi langsung.</p>
+
+    <input type="text" class="form-control mb-2" placeholder="Nama">
+    <input type="email" class="form-control mb-2" placeholder="Email">
+    <input type="text" class="form-control mb-2" placeholder="Alamat">
+
+    <button class="btn btn-orange" onclick="daftarEvent()">Daftar</button>
+  </div>
+</section>
+
+<!-- KONTAK / FOOTER -->
+<section class="bg-dark text-white py-5">
+  <div class="container">
+    <h4>Kontak Kami</h4>
+    <p>📞 0812-3456-7890</p>
+    <p>📧 info@lentera-cerah.com</p>
+    <p>📍 Jakarta, Indonesia</p>
+    <hr>
+    <p class="text-center">© 2025 Lentera Cerah. All Rights Reserved.</p>
+  </div>
+</section>
+
+<!-- DONASI MODAL (LENGKAP - FINAL) -->
+<div class="modal fade" id="donasiModal">
+  <div class="modal-dialog">
+    <div class="modal-content p-4">
+
+      <h4 class="mb-3">Form Donasi</h4>
+
+      <input type="text" id="nama" class="form-control mb-2" placeholder="Nama Lengkap">
+      <input type="email" id="email" class="form-control mb-3" placeholder="Email Aktif">
+
+      <input type="number" id="nominal" class="form-control mb-3" placeholder="Masukkan Nominal">
+
+      <label class="mb-1">Metode Pembayaran</label>
+      <select id="metode" class="form-control mb-2">
+        <option>Visa</option>
+        <option>Mastercard</option>
+      </select>
+
+      <div class="payment-icons">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Visa_Inc._logo_%282021–present%29.svg" width="67" height="67">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" width="67" height="47">
+      </div>
+
+      <input type="text" id="kartu" class="form-control mb-2" placeholder="Nomor Kartu">
+
+      <div class="d-flex gap-2">
+        <input type="text" id="expiry" class="form-control" placeholder="MM/YY">
+        <input type="text" id="cvv" class="form-control" placeholder="CVV">
+      </div>
+
+      <button class="btn btn-orange w-100 mt-3" onclick="kirimDonasi()">
+        Donasi Sekarang
+      </button>
+
+      <p class="text-success text-center mt-2">
+        ✔ Transaksi Aman & Terlindungi
+      </p>
+
+    </div>
+  </div>
+</div>
+
+<!-- JS -->
+<script src="Java.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- MODAL KHUSUS DONASI BESAR -->
+<div class="modal fade" id="bigDonasiModal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center p-4">
+
+      <h3 class="text-success">🌟 Donasi Besar!</h3>
+
+      <p class="mt-3">
+        Terima kasih atas kontribusi luar biasa Anda 🙏<br>
+        Donasi Anda akan memberikan dampak besar bagi masa depan anak-anak.
+      </p>
+
+      <button class="btn btn-orange mt-3" data-bs-dismiss="modal">
+        Tutup
+      </button>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
